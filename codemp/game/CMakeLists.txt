@@ -222,6 +222,10 @@ if(MakeApplicationBundles AND BuildMPEngine)
 		LIBRARY
 		DESTINATION "${JKAInstallDir}/${MPEngine}.app/Contents/MacOS/EternalJK"
 		COMPONENT ${JKAMPCoreComponent})
+	install(TARGETS ${MPGame}
+		LIBRARY
+		DESTINATION "${JKAInstallDir}/${MPEngine}.app/Contents/MacOS/base"
+		COMPONENT ${JKAMPCoreComponent})
 elseif(WIN32)
 else()
 	install(TARGETS ${MPGame}
